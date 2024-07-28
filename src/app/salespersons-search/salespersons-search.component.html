@@ -1,0 +1,21 @@
+<div style="margin: 50px; text-align: center;">
+    <h3 style="background-color: lightblue; text-align: center; padding: 10px; border-radius: 5px;">Search Salesperson</h3>
+    <input name="FirstName" [(ngModel)]="FirstName" placeholder="First Name" style="margin: 10px; padding: 10px; width: 80%;">
+    <input name="LastName" [(ngModel)]="LastName" placeholder="Last Name" style="margin: 10px; padding: 10px; width: 80%;">
+    <button (click)="search_salespersons()" type="submit" style="margin: 10px; padding: 10px; width: 80%; background-color: green; color: white; border: none; border-radius: 5px;">Search</button>
+</div>
+
+<div *ngIf="salespersons.length > 0" style="margin: 50px; text-align: center;">
+    <h3 style="background-color: lightblue; text-align: center; padding: 10px; border-radius: 5px;">Salespersons Found</h3>
+    <div *ngFor="let item of salespersons" style="margin: 20px; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+        ♦ <strong>Name:</strong> {{ item.FirstName }} {{ item.LastName }}<br>
+        ♦ <strong>Address:</strong> {{ item.Address }}<br>
+        ♦ <strong>Phone:</strong> {{ item.Phone }}<br>
+        ♦ <strong>Start Date:</strong> {{ item.StartDate | date }}<br>
+        ♦ <strong>Termination Date:</strong> {{ item.TerminationDate ? (item.TerminationDate | date) : 'N/A' }}<br>
+        ♦ <strong>Manager:</strong> {{ item.Manager }}<br>
+    </div>
+</div>
+
+
+

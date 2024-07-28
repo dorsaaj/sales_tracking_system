@@ -1,0 +1,26 @@
+<div style="margin: 50px; text-align: center;">
+    <h2 style="background-color: aqua; text-align: center; padding: 10px; border-radius: 5px;">Sales List</h2>
+</div>
+
+<div *ngFor="let sale of sales" style="margin: 20px; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+    <p>
+        ♦ <strong>Product Name:</strong> {{ sale.ProductName }}<br>
+        ♦ <strong>Product Manufacturer:</strong> {{ sale.ProductManufacturer }}<br>
+        ♦ <strong>Salesperson:</strong> {{ sale.SalespersonFirstName }} {{ sale.SalespersonLastName }}<br>
+        ♦ <strong>Customer:</strong> {{ sale.CustomerFirstName }} {{ sale.CustomerLastName }}<br>
+        ♦ <strong>Sales Date:</strong> {{ sale.SalesDate }}<br>
+    </p>
+    <hr>
+</div>
+
+<div style="margin: 50px; text-align: center;">
+    <h3 style="background-color: lightblue; text-align: center; padding: 10px; border-radius: 5px;">Add New Sale</h3>
+    <input [(ngModel)]="ProductName" name="ProductName" placeholder="Product Name" required style="margin: 10px; padding: 10px; width: 80%;">
+    <input [(ngModel)]="ProductManufacturer" name="ProductManufacturer" placeholder="Manufacturer" style="margin: 10px; padding: 10px; width: 80%;">
+    <input [(ngModel)]="SalespersonFirstName" name="SalespersonFirstName" placeholder="Salesperson First Name" style="margin: 10px; padding: 10px; width: 80%;">
+    <input [(ngModel)]="SalespersonLastName" name="SalespersonLastName" placeholder="Salesperson Last Name" style="margin: 10px; padding: 10px; width: 80%;">
+    <input [(ngModel)]="CustomerFirstName" name="CustomerFirstName" placeholder="Customer First Name" style="margin: 10px; padding: 10px; width: 80%;">
+    <input [(ngModel)]="CustomerLastName" name="CustomerLastName" placeholder="Customer Last Name" style="margin: 10px; padding: 10px; width: 80%;">
+    <input [(ngModel)]="SalesDate" name="SalesDate" type="date" placeholder="Sales Date" style="margin: 10px; padding: 10px; width: 80%;">
+    <button (click)="save()" type="submit" style="margin: 10px; padding: 10px; width: 80%; background-color: green; color: white; border: none; border-radius: 5px;">Create</button>
+</div>

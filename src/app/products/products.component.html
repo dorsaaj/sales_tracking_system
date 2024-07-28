@@ -1,0 +1,40 @@
+<div style="margin: 50px; text-align: center;">
+  <h2 style="background-color: aqua; text-align: center; padding: 10px; border-radius: 5px;">Products List</h2>
+</div>
+
+<div *ngFor="let product of products" style="margin: 20px; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+  <p>
+      &diams; <strong>Name:</strong> {{ product.Name }}<br>
+      &diams; <strong>Manufacturer:</strong> {{ product.Manufacturer }}<br>
+      &diams; <strong>Style:</strong> {{ product.Style }}<br>
+      &diams; <strong>Purchase Price:</strong> {{ product.PurchasePrice | currency }}<br>
+      &diams; <strong>Sale Price:</strong> {{ product.SalePrice | currency }}<br>
+      &diams; <strong>Quantity On Hand:</strong> {{ product.QtyOnHand }}<br>
+      &diams; <strong>Commission Percentage:</strong> {{ product.CommissionPercentage }}%<br>
+  </p>
+  <hr>
+</div>
+
+<div style="margin: 50px; text-align: center;">
+  <h3 style="background-color: lightblue; text-align: center; padding: 10px; border-radius: 5px;">Add New Product</h3>
+  <input [(ngModel)]="Name" name="Name" placeholder="Name" required style="margin: 10px; padding: 10px; width: 80%;">
+  <input [(ngModel)]="Manufacturer" name="Manufacturer" placeholder="Manufacturer" style="margin: 10px; padding: 10px; width: 80%;">
+  <input [(ngModel)]="PurchasePrice" name="PurchasePrice" placeholder="Purchase Price" type="number" style="margin: 10px; padding: 10px; width: 80%;">
+  <input [(ngModel)]="Style" name="Style" placeholder="Style" style="margin: 10px; padding: 10px; width: 80%;">
+  <input [(ngModel)]="SalePrice" name="SalePrice" type="number" placeholder="Sale Price" style="margin: 10px; padding: 10px; width: 80%;">
+  <input [(ngModel)]="QtyOnHand" name="QtyOnHand" type="number" placeholder="Quantity On Hand" style="margin: 10px; padding: 10px; width: 80%;">
+  <input [(ngModel)]="CommissionPercentage" name="CommissionPercentage" type="number" placeholder="Commission Percentage" style="margin: 10px; padding: 10px; width: 80%;">
+  <button (click)="save()" type="submit" style="margin: 10px; padding: 10px; width: 80%; background-color: green; color: white; border: none; border-radius: 5px;">Create</button>
+</div>
+
+<div style="margin: 50px; text-align: center;">
+  <h3 style="background-color: lightblue; text-align: center; padding: 10px; border-radius: 5px;">Update Product</h3>
+  <input [(ngModel)]="Name" name="Name" placeholder="Name" required style="margin: 10px; padding: 10px; width: 80%;">
+  <input [(ngModel)]="Manufacturer" name="Manufacturer" placeholder="Manufacturer" required style="margin: 10px; padding: 10px; width: 80%;">
+  <input [(ngModel)]="PurchasePrice" name="PurchasePrice" type="number" placeholder="Purchase Price" style="margin: 10px; padding: 10px; width: 80%;">
+  <input [(ngModel)]="Style" name="Style" placeholder="Style" style="margin: 10px; padding: 10px; width: 80%;">
+  <input [(ngModel)]="SalePrice" name="SalePrice" type="number" placeholder="Sale Price" style="margin: 10px; padding: 10px; width: 80%;">
+  <input [(ngModel)]="QtyOnHand" name="QtyOnHand" type="number" placeholder="Quantity On Hand" style="margin: 10px; padding: 10px; width: 80%;">
+  <input [(ngModel)]="CommissionPercentage" name="CommissionPercentage" type="number" placeholder="Commission Percentage" style="margin: 10px; padding: 10px; width: 80%;">
+  <button (click)="update()" type="submit" style="margin: 10px; padding: 10px; width: 80%; background-color: blue; color: white; border: none; border-radius: 5px;">Update</button>
+</div>

@@ -1,0 +1,10 @@
+<div style="margin: 50px; text-align: center;">
+    <h3 style="background-color: lightblue; text-align: center; padding: 10px; border-radius: 5px;">Add New Salesperson</h3>
+    <input [(ngModel)]="FirstName" name="FirstName" placeholder="First Name" style="margin: 10px; padding: 10px; width: 80%;">
+    <input [(ngModel)]="LastName" name="LastName" placeholder="Last Name" style="margin: 10px; padding: 10px; width: 80%;">
+    <input [(ngModel)]="Address" name="Address" placeholder="Address" style="margin: 10px; padding: 10px; width: 80%;">
+    <input [(ngModel)]="Phone" name="Phone" placeholder="Phone" style="margin: 10px; padding: 10px; width: 80%;">
+    <input [(ngModel)]="StartDate" name="StartDate" type="date" placeholder="Start Date" style="margin: 10px; padding: 10px; width: 80%;">
+    <input [(ngModel)]="Manager" name="Manager" placeholder="Manager" style="margin: 10px; padding: 10px; width: 80%;">
+    <button (click)="save()" type="submit" style="margin: 10px; padding: 10px; width: 80%; background-color: green; color: white; border: none; border-radius: 5px;">Create</button>
+</div>

@@ -1,0 +1,12 @@
+<div style="margin: 50px; text-align: center;">
+    <h3 style="background-color: lightblue; text-align: center; padding: 10px; border-radius: 5px;">Update Salesperson Information</h3>
+    <input name="FirstName" [(ngModel)]="FirstName" placeholder="First Name" required style="margin: 10px; padding: 10px; width: 80%;">
+    <input name="LastName" [(ngModel)]="LastName" placeholder="Last Name" required style="margin: 10px; padding: 10px; width: 80%;">
+    <input name="Address" [(ngModel)]="Address" placeholder="Address" style="margin: 10px; padding: 10px; width: 80%;">
+    <input name="Phone" [(ngModel)]="Phone" placeholder="Phone" style="margin: 10px; padding: 10px; width: 80%;">
+    <input name="StartDate" [(ngModel)]="StartDate" type="date" placeholder="Start Date" style="margin: 10px; padding: 10px; width: 80%;">
+    <input name="TerminationDate" [(ngModel)]="TerminationDate" type="date" placeholder="Termination Date" style="margin: 10px; padding: 10px; width: 80%;">
+    <input name="Manager" [(ngModel)]="Manager" placeholder="Manager" style="margin: 10px; padding: 10px; width: 80%;">
+    <button (click)="save()" type="submit" style="margin: 10px; padding: 10px; width: 80%; background-color: green; color: white; border: none; border-radius: 5px;">Update</button>
+</div>
+

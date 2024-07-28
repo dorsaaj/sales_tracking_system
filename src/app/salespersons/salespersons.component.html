@@ -1,0 +1,15 @@
+<div style="margin: 50px; text-align: center;">
+  <h2 style="background-color: aqua; text-align: center; padding: 10px; border-radius: 5px;">Sales Persons List</h2>
+</div>
+
+<div *ngFor="let item of salespersons" style="margin: 20px; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+  <p>
+      ♦ <strong>Name:</strong> {{ item.FirstName }} {{ item.LastName }}<br>
+      ♦ <strong>Address:</strong> {{ item.Address }}<br>
+      ♦ <strong>Phone:</strong> {{ item.Phone }}<br>
+      ♦ <strong>Start Date:</strong> {{ item.StartDate | date }}<br>
+      ♦ <strong>Termination Date:</strong> {{ item.TerminationDate ? (item.TerminationDate | date) : 'N/A' }}<br>
+      ♦ <strong>Manager:</strong> {{ item.Manager }}<br>
+  </p>
+  <hr>
+</div>
